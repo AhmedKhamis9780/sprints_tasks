@@ -1,0 +1,37 @@
+<table>
+    <tr>
+      <th>first name</th>
+      <th>last name</th>
+      <th>mobile</th>
+      <th>email</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {% for data in student_info %}
+    <tr>
+      
+      <td> {{ data.f_name }}</td>
+      <td>{{ data.l_name }}</td>
+      <td>{{ data.mobile }}</td>
+      <td>{{ data.email }}</td>
+      
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<table>
+  <tr>
+    <th>current courses</th>
+    <th>finished courses</th>
+  </tr>
+  </thead>
+  <tbody>
+    {% for data in courses_info %}
+    <tr>
+    <td>{{ data.current_courses }}</td>
+    <td>{{ data.finished_courses }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
