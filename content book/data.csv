@@ -1,3 +1,5 @@
-username,email,phone,address,create_date
-ahmed,ahmed.khamis9780@gmail.com,10254915,alex,2020-3-5
-mohamed,mohamed@proj.com,105648931,cairo,2023-05-19
+name,email,phone,address,create_date
+Farid Fady,ahmed.khamis9780@gmail.com,10254915,alex,2020-3-5
+Mohamed khamis,mohamed@proj.com,105648931,cairo,2023-05-19
+Rowen Samy,rowen@proj.com,1574634,sohag,2023-05-20
+Samy Tamer,ahmed.samy@project.com,10356412,portsahed,2023-05-20

@@ -1,10 +1,17 @@
 
 from class_file import content
-
-filename=input('Enter content file name:')
+import os
+filename=input('Enter content file name:') #ask for content file
+#checking if file exist if not ask for file name again  
+while not(os.path.exists(filename)):
+    print("File does not exist.")
+    filename=input('Enter content file name:')
+#create object
 user=content(filename)
+#infinity loop break by variable 'cont'
 cont=True
 while cont:
+    #choose the operation 
     num_op=input('''
     what you want to 
     1:view content
@@ -20,7 +27,7 @@ while cont:
         user.del_content()
     elif num_op=='4':
         user.modify_content()
-
+    
     exit_program=input('Do you want to do another operation[y/n]? ')
     if exit_program=='y':
         continue
