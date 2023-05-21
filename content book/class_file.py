@@ -15,7 +15,22 @@ class content:
     
     def view_content(self):
         #view data in form of dataframe
-        print(pd.DataFrame(self.data_dict))
+        df=pd.DataFrame(self.data_dict)
+        while True:
+            num=input('''
+                what you sort by
+                1:Name
+                2:create time
+                Enter the number operation:''')
+            if num=='1':
+                print(df.sort_values('name'))
+                break
+            elif num=='2':
+                print(df.sort_values('create_date'))
+                break
+            else:
+                print('wrong number')        
+        
 
     def create_content(self):
         print('creating a new content:')
@@ -35,7 +50,7 @@ class content:
         self.data_dict['email'].append(email)
         self.data_dict['phone'].append(phone)
         self.data_dict['address'].append(address)
-        self.data_dict['create_date'].append(datetime.date.today())
+        self.data_dict['create_date'].append(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
         
         data_df = pd.DataFrame(self.data_dict)
         data_df.to_csv(self.filename, index=False)
@@ -55,6 +70,7 @@ class content:
             self.data_dict['phone'].pop(index)
             self.data_dict['address'].pop(index)
             self.data_dict['create_date'].pop(index)
+            print('the content deleted sucessfully')
             #save changes to the file by Convert dictionary to DataFrame then save DataFrame to csv file
             data_df = pd.DataFrame(self.data_dict)
             data_df.to_csv(self.filename, index=False)

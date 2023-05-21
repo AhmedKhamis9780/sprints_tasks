@@ -18,6 +18,7 @@ while cont:
     2:create a new content
     3:delete content
     4:modify content
+    5:exit program
     Enter the number operation:''')
     if num_op=='1':
         user.view_content()
@@ -27,11 +28,9 @@ while cont:
         user.del_content()
     elif num_op=='4':
         user.modify_content()
-    
-    exit_program=input('Do you want to do another operation[y/n]? ')
-    if exit_program=='y':
-        continue
-    else: cont=False    
+    elif num_op=='5':
+        cont=False  
+    else: print('wrong operation number')      
          
 
 
